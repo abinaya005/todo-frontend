@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+ Todo Tasks Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple yet functional **Todo Task Management** web application built with React, Node.js, Express, MongoDB, and Firebase Authentication. It allows users to authenticate via Google, add tasks with title and description, set task status (Pending, In Progress, Completed), and delete tasks.
 
-## Available Scripts
+## 🔧 Tech Stack
 
-In the project directory, you can run:
+- **Frontend**: React, CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB Atlas
+- **Authentication**: Firebase (Google Auth)
+- **Deployment**:
+  - Frontend: Vercel
+  - Backend: Localhost (for now)
+- **Version Control**: Git & GitHub
 
-### `npm start`
+ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Google Login using Firebase
+- Add, delete, and update status of tasks
+- Task list is user-specific (based on email)
+- Color-coded task cards based on status
+- Responsive UI with gradient background
+- Timestamp for task creation (via MongoDB)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ Screenshots
 
-### `npm test`
+![image](https://github.com/user-attachments/assets/fc09e83f-4692-4721-a97e-585284db1f61)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+ Architecture Diagram
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![flowchart](https://github.com/user-attachments/assets/5ec7dee8-2515-49bd-82de-c48497c33fda)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ Assumptions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Tasks are uniquely filtered and managed based on the authenticated user’s email.
+- Each user can only see their own task list.
+- This app currently runs backend locally due to render deployment issues.
+- MongoDB URI is stored securely in `.env` and not exposed in the codebase.
 
-### `npm run eject`
+ Running Locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone frontend repo
+   git clone https://github.com/abinaya005/todo-frontend.git
+   cd todo-frontend
+   npm install
+   npm start
+   Clone backend repo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2.Clone backend repo
+git clone https://github.com/abinaya005/todo-backend.git
+cd todo-backend
+npm install
+Configure MongoDB
+Create .env in backend:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3.Configure MongoDB
+PORT=5000
+Start Backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4.Start Backend
+node server.js
+Open browser
+Navigate to: http://localhost:3000
 
-## Learn More
+5.Open browser
+Live Deployment
+Frontend: todo-frontend.vercel.app
+Backend: Runs locally for now
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ Author
+Abinaya Ananthan
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+GitHub: @abinaya005
 
-### Code Splitting
+ This project is a part of a hackathon run by https://www.katomaran.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
